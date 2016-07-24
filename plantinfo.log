@@ -1,0 +1,14 @@
+INFO:root:Wed Jul 20 19:15:41 2016 Enabling moisture sensor
+INFO:root:Wed Jul 20 19:25:41 2016 Don't water me.
+INFO:root:Thu Jul 21 06:00:02 2016 Enabling moisture sensor
+INFO:root:Thu Jul 21 06:10:02 2016 Don't water me.
+INFO:root:Fri Jul 22 06:00:02 2016 Enabling moisture sensor
+INFO:root:Fri Jul 22 06:10:02 2016 Don't water me.
+INFO:root:Sat Jul 23 06:00:02 2016 Enabling moisture sensor
+INFO:root:Sat Jul 23 06:10:02 2016 *** Water Me! ***
+INFO:root:Sun Jul 24 06:00:03 2016 Enabling moisture sensor
+INFO:root:Sun Jul 24 06:10:03 2016 *** Water Me! ***
+INFO:root:Sun Jul 24 07:53:39 2016 Enabling moisture sensor
+INFO:root:Sun Jul 24 07:53:45 2016 *** Water Me! ***
+INFO:root:Sun Jul 24 07:54:51 2016 Enabling moisture sensor
+INFO:root:Sun Jul 24 07:54:57 2016 *** Water Me! ***
