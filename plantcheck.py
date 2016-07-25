@@ -89,7 +89,7 @@ localtime = time.asctime( time.localtime(time.time()) )
 logging.info(localtime + " Enabling moisture sensor")
 
 # let's just pause for a while (10 mins), let the sensor settle
-time.sleep(6)
+time.sleep(600)
 
 # As the moisture sensor is digital, it returns high if dry,
 # returning low if moisture is detected.
