@@ -7,6 +7,9 @@
 # It now also writes to a log file showing activity and errors/debug into.
 #
 
+# need to get current working directory, so import 'os'
+import os
+
 # import logging module
 import logging
 
@@ -39,7 +42,7 @@ def sendEmail():
         msg.attach(MIMEText(body, 'plain'))
         # set the filename and path
         filename = "plant.jpg"
-        path = "/home/pi/plant/"
+        path = os.getcwd() + "/"
         attachment = open(path + filename, "rb")
 
         part = MIMEBase('application', 'octet-stream')
@@ -64,7 +67,8 @@ def sendEmail():
 
 # Set up logging
 LOG_FILENAME = 'plantinfo.log'
-logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
+path = os.getcwd() + "/"
+logging.basicConfig(filename=path + LOG_FILENAME,level=logging.DEBUG)
 
 # let's use BCM referencing for GPIO
 GPIO.setmode(GPIO.BCM)
@@ -85,7 +89,7 @@ localtime = time.asctime( time.localtime(time.time()) )
 logging.info(localtime + " Enabling moisture sensor")
 
 # let's just pause for a while (10 mins), let the sensor settle
-time.sleep(600)
+time.sleep(6)
 
 # As the moisture sensor is digital, it returns high if dry,
 # returning low if moisture is detected.
