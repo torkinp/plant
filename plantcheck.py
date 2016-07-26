@@ -42,7 +42,7 @@ def sendEmail():
         msg.attach(MIMEText(body, 'plain'))
         # set the filename and path
         filename = "plant.jpg"
-        path = os.getcwd() + "/"
+        path = os.path.dirname(os.path.abspath(__file__)) + "/"
         attachment = open(path + filename, "rb")
 
         part = MIMEBase('application', 'octet-stream')
@@ -66,9 +66,9 @@ def sendEmail():
 # code starts here :)
 
 # Set up logging
-LOG_FILENAME = 'plantinfo.log'
-path = os.getcwd() + "/"
-logging.basicConfig(filename=path + LOG_FILENAME,level=logging.DEBUG)
+path = os.path.dirname(os.path.abspath(__file__)) + "/"
+LOG_FILENAME = path + 'plantinfo.log'
+logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
 
 # let's use BCM referencing for GPIO
 GPIO.setmode(GPIO.BCM)
